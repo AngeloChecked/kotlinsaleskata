@@ -1,7 +1,5 @@
 package it.kotlinsaleskata
 
-import kotlin.math.ceil
-
 interface taxable {
     fun tax(): Double
 }
@@ -15,6 +13,6 @@ open class Good(val name: String, val price: Double, val imported: Boolean = fal
     override fun importTax() = if (imported) (price / 100) * 5 else 0.0
 }
 
-class NoTaxableGood(name: String, price: Double, imported: Boolean = false) : Good(name, price, imported){
+class NoTaxableGood(name: String, price: Double, imported: Boolean = false) : Good(name, price, imported) {
     override fun tax() = 0.0
 }

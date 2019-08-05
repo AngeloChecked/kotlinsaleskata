@@ -22,9 +22,4 @@ class GoodTest{
 
         assertEquals(0.0, good.tax())
     }
-
-
-
-
-
 }
